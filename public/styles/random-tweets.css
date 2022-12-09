@@ -1,3 +1,4 @@
+/* black border on tweet box */
 .tweet {
   border: 2px solid black;
   margin-top: 1em;
@@ -28,7 +29,6 @@
   justify-content: space-around;
   align-items: center;
   font-size: 0.6em;
-  
 }
 
 .tweet footer {
