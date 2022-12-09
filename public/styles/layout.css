@@ -15,14 +15,22 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+  /* color: #ffffff;
+  background-color: #0a559c; */
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  width: 90%;
+  /* background-color: #0054a2; */
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- /* font-family: 'Bungee', cursive; */

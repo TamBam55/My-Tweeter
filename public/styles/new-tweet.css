@@ -1,0 +1,41 @@
+
+
+/* new tweeter box (with pretty styling) */
+.new-tweeter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  margin-top: -10px;
+}
+
+/* tweet line */
+#tweeter-text {
+  width: 200%;
+  align-items: center;
+  border: none;
+  border-bottom: 4px solid black;
+  background-color: transparent;
+  resize: none
+}
+
+
+/* tweet button and counter seperation */
+.new-tweeter1-and-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200%;
+}
+
+/* tweet button */
+.tweeter-button {
+  border: none;
+  background-color: #4056A1;
+  color: #fff;
+  border-radius: 5px
+}
+
+
+

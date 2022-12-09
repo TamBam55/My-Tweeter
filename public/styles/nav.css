@@ -1,11 +1,65 @@
-<link 
-body {
-#nav-bar .logo {
-  height: 120px
-  width: 100%
-  background-color: #4056a1 
-  font: #FFFFFF
-  padding: 1.5em
-  js position: fixed;
-}
-}
+/* tweeter title (head)  */
+
+  /* write a new tweet button */
+      nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 120px;
+      width: 100vw;
+      background-color: #4056a1;
+      color: #FFFFFF;
+      padding: 0 1.5em;
+      position: fixed; 
+      top: 0;
+      left: 0;
+      }
+    
+      nav span {
+      font-family: 'Bungee', cursive;
+      }
+    
+    /* write a new tweet button */
+      .navNewTweet {
+        font-size: medium;
+      }
+      .icon {
+        color: red;
+        text-align: center;
+        margin-top: -15px;
+      }
+      .navNewTweet:hover {
+        cursor: pointer;
+      }
+      .navNewTweet:hover .icon {
+        position: relative;
+        animation: bounce 0.5s infinite linear;
+      }
+      @keyframes bounce {
+          0% { top: 0; }
+          50% { top: -0.2em; }
+          70% { top: -0.3em; }
+          100% { top: 0; }
+      }
+
+
+      /* .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: flex-start;
+        }
+    
+    .flex-item:nth-child(1) {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        }
+    
+    .flex-item:nth-child(2) {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        } */

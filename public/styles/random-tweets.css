@@ -1,0 +1,41 @@
+.tweet {
+  border: 2px solid black;
+  margin-top: 1em;
+  padding: 1em;
+  box-shadow: 2px 2px 2px rgb(67, 61, 61);
+}
+
+.tweet:hover {
+  box-shadow: 6px 6px 6px rgb(67, 61, 61);
+}
+
+.tweet header, .tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet header div {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet footer div {
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.6em;
+  
+}
+
+.tweet footer {
+  border-top: 2px solid black;
+}
+
+.tweet footer div i:hover {
+ color: rgb(222, 162, 9);
+}
+
