@@ -37,5 +37,5 @@
 
 .tweet footer div i:hover {
  color: rgb(222, 162, 9);
+ cursor: pointer;
 }
-
