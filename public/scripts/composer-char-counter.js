@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // --- our code goes here ---
   console.log("Say Hello to my Little Friend");
-  $("textarea").on("input", function() {
+  $("#tweeter-text").on("input", function() {
     const maxLimit = 140;
     let characterCount = $(this).val().length;
     let remaining = maxLimit - characterCount;
@@ -11,9 +11,9 @@ $(document).ready(function() {
     $counterButton.val(remaining);
 
     if (remaining < 0) {
-      $counterButton.addClass("invalid");
-    } else {
-      $counterButton.removeClass("invalid");
+      $counterButton.addClass("redText");
+    } else if (remaining > 0) {
+      $counterButton.removeClass("redText");
     }
   });
 });

@@ -8,11 +8,17 @@
   align-items: center;
   padding: 2em;
   margin-top: -10px;
+  width: 100%;
+}
+
+.new-tweeter form {
+  width: 100%;
+
 }
 
 /* tweet line */
 #tweeter-text {
-  width: 200%;
+  width: 100%;
   align-items: center;
   border: none;
   border-bottom: 4px solid black;
@@ -26,7 +32,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 200%;
+  width: 100%;
+  font-family: 'Bungee', cursive;
 }
 
 /* tweet button */
@@ -34,7 +41,29 @@
   border: none;
   background-color: #1943cf;
   color: #fff;
-  border-radius: 5px
+  border-radius: 5px;
+  font-family: 'Bungee', cursive;
+}
+
+.tweeter-button:hover {
+  box-shadow: 6px 6px 6px #5671ca;
+  cursor: pointer;
+}
+
+.errorText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  display: none;
+  color: red;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.redText {
+  color: red;
 }
 
 
