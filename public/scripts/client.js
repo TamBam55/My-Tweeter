@@ -100,7 +100,7 @@ $(document).ready(function() {
     if (tweet.length === 5) {
       return $('#error-message').slideDown(400);
     } else if (tweet.length >= 146)
-      return $('#error-two').slideDown();
+      return $('#error-two').slideDown(400);
     $.ajax('/tweets', { method: 'POST', data: tweet }).then(loadTweets());
   });
   
