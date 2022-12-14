@@ -17,15 +17,12 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  /* color: #ffffff;
-  background-color: #0a559c; */
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container {
   width: 90%;
-  /* background-color: #0054a2; */
   margin-right: auto;
   margin-left: auto;
 }
@@ -34,3 +31,35 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+/* For Desktop View */
+@media (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body > header {
+    width: 33%;
+    margin: 220px 0px 0px 3rem;
+  }
+  .container {
+    width: 55%;
+    float: right;
+    margin: 200px 3rem 0px 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    height: 90px;
+  }
+  body > header {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 570px) {
+  .new-tweet {
+    font-size: 24em;
+  }
+}
+ 

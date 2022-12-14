@@ -50,6 +50,7 @@
   cursor: pointer;
 }
 
+/* error text styling */
 .errorText {
   display: none;
   flex-direction: column;
