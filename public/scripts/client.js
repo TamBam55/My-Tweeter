@@ -98,13 +98,11 @@ $(document).ready(function() {
     const tweet = $(this).serialize();
     console.log(tweet);
     if (tweet.length === 5) {
-      return alert("Please type a tweet to submit");
+      return $('#error-message').slideDown(400);
     } else if (tweet.length >= 146)
-      return alert("Please modify to 140 characters or less");
+      return $('#error-two').slideDown();
     $.ajax('/tweets', { method: 'POST', data: tweet }).then(loadTweets());
-
   });
-
   
 
   loadTweets();

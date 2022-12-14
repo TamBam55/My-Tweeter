@@ -31,9 +31,9 @@
       .navNewTweet:hover {
         cursor: pointer;
       }
-      .navNewTweet:hover .icon {
+      .navNewTweet .icon {
         position: relative;
-        animation: bounce 0.5s infinite linear;
+        animation: bounce 0.8s infinite linear;
       }
       @keyframes bounce {
           0% { top: 0; }
@@ -41,25 +41,3 @@
           70% { top: -0.3em; }
           100% { top: 0; }
       }
-
-
-      /* .flex-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-content: stretch;
-        align-items: flex-start;
-        }
-    
-    .flex-item:nth-child(1) {
-        order: 0;
-        flex: 0 1 auto;
-        align-self: auto;
-        }
-    
-    .flex-item:nth-child(2) {
-        order: 0;
-        flex: 0 1 auto;
-        align-self: auto;
-        } */
