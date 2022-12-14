@@ -48,6 +48,12 @@ $(document).ready(function() {
 
   };
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweet) {
     let $tweet = `
 <article class="tweet">
@@ -59,7 +65,7 @@ $(document).ready(function() {
     </div>
     <p>${tweet.user.handle}</p>
   </header>
-  <p>${tweet.content.text}</p>
+  <p>${escape(tweet.content.text)}</p>
   <footer>
     <p>${timeago.format(tweet.created_at)}</p>
     <div>
@@ -73,19 +79,15 @@ $(document).ready(function() {
     return $tweet;
   };
 
-
-
-
   // ajax GET request 
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function(tweets) {
         console.log("The tweets are storing in the database");
         renderTweets(tweets);
-      })
-  //     .catch(function(err) {
-  //       console.log("There was an ERROR ", err);
-  //     });
+      });
+    $('#tweeter-text').val("");
+    $('.counter').text(140);
   };
 
 
@@ -94,43 +96,16 @@ $(document).ready(function() {
     events.preventDefault();
     console.log('Button clicked, performing ajax call...');
     const tweet = $(this).serialize();
-    console.log(tweet)
+    console.log(tweet);
     if (tweet.length === 5) {
-      return alert("Please type a tweet to submit")
+      return alert("Please type a tweet to submit");
     } else if (tweet.length >= 146)
-      return alert("Please modify to 140 characters or less")
-    $.ajax('/tweets', { method: 'POST', data: tweet }).then(loadTweets);
+      return alert("Please modify to 140 characters or less");
+    $.ajax('/tweets', { method: 'POST', data: tweet }).then(loadTweets());
+
   });
 
+  
 
   loadTweets();
 });
-
-
-
-
-// Time Since Function 
-// function timeSince(date) {
-//   const seconds = Math.floor((new Date() - date) / 1000);
-//   const interval = Math.floor(seconds / 31536000);
-//   if (interval >= 1) {
-//       return interval + " years ago";
-//   }
-//   interval = Math.floor(seconds / 2592000);
-//   if (interval >= 1) {
-//       return interval + " months ago";
-//   }
-//   interval = Math.floor(seconds / 86400);
-//   if (interval >= 1) {
-//       return interval + " days ago";
-//   }
-//   interval = Math.floor(seconds / 3600);
-//   if (interval >= 1) {
-//       return interval + " hours ago";
-//   }
-//   interval = Math.floor(seconds / 60);
-//   if (interval >= 1) {
-//       return interval + " minutes ago";
-//   }
-//   return Math.floor(seconds + 1) + " seconds ago";
-// }
