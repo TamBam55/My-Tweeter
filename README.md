@@ -20,6 +20,11 @@ This repository is the starter code for the project: Students will fork and clon
 - morgan
 
 ## Final Product
+Home Page 
 !["Home Page"](https://github.com/TamBam55/My-Tweeter/blob/master/images/Home%20Screen.PNG)
+
+Empty Tweet Error
 !["Empty Tweet Error"](https://github.com/TamBam55/My-Tweeter/blob/master/images/Empty%20box%20error.PNG)
+
+Character Limit Exceeded
 !["Too Many Characters Error"](https://github.com/TamBam55/My-Tweeter/blob/master/images/Over%20character%20limit%20error.PNG)
