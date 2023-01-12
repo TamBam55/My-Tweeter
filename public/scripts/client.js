@@ -84,14 +84,20 @@ $(document).ready(function () {
 
   const $form = $("form");
   $form.on("submit", function (events) {
-    events.preventDefault();
-
-    const tweet = $(this).serialize();
-
-    if (tweet.length === 5) {
-      return $("#error-message").slideDown(400);
-    } else if (tweet.length >= 146) return $("#error-two").slideDown(400);
-    $.ajax("/tweets", { method: "POST", data: tweet }).then(loadTweets());
+      events.preventDefault();
+  
+      const tweet = $(this).serialize();
+      const tweetLength = tweet.length;
+  
+      if (tweetLength <= 5) {
+        $("#error-message").slideDown(400);
+      } else if (tweetLength >= 146) {
+         $("#error-two").slideDown(400);
+      } else {
+          $("#error-message").slideUp(400);
+          $("#error-two").slideUp(400);
+          $.ajax("/tweets", { method: "POST", data: tweet }).then(loadTweets());
+      }
   });
 
   loadTweets();
