@@ -75,9 +75,7 @@ $(document).ready(function () {
 
   // ajax GET request
   const loadTweets = function () {
-    $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
-      renderTweets(tweets);
-    });
+    $.ajax("/tweets", { method: "GET" }).then((tweets) => renderTweets(tweets)) 
     $("#tweeter-text").val("");
     $(".counter").text(140);
   };
@@ -96,7 +94,7 @@ $(document).ready(function () {
       } else {
           $("#error-message").slideUp(400);
           $("#error-two").slideUp(400);
-          $.ajax("/tweets", { method: "POST", data: tweet }).then(loadTweets());
+          $.ajax("/tweets", { method: "POST", data: tweet }).then(() => loadTweets());
       }
   });
 
